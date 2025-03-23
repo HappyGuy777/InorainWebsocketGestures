@@ -1,7 +1,3 @@
-# HaGRID Dynamic Gestures with WebSocket
-
-[HaGRID main repo](https://github.com/hukenovs/hagrid)
-
 ## Overview
 
 This repository implements dynamic gesture recognition using the HaGRID dataset. The project combines:
@@ -42,7 +38,7 @@ dynamic_gestures/
 **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone [https://github.com/HappyGuy777/InorainWebsocketGestures]
    cd your-repo
    ```
 
