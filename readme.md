@@ -93,21 +93,6 @@ dynamic_gestures/
    docker run --rm -p 8000:8000 --name dynamic-websocket-app dynamic-websocket-app
    ```
 
-## WebSocket and External Integration
-
-The server includes a WebSocket endpoint that accepts connections and allows sending commands. For example, upon recognizing the "swipe_left" gesture, a command can be sent to change the channel. This enables integration with other applications that can subscribe to WebSocket messages and respond accordingly.
-
-## Conclusion
-
-This README provides:
-- An overview of the project structure.
-- Instructions for local installation and running the application.
-- Docker build and deployment steps.
-- A WebSocket usage example for command transmission.
-
-For further inquiries or feature extensions, additional documentation sections can be added.
-
-
 ## Dynamic gestures
 Supportable Dynamic gestures:
 
