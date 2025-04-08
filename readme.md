@@ -87,7 +87,10 @@ dynamic_gestures/
 
    ```bash
    docker run --rm -p 8000:8000 -e RTSP_URL="your-url" --name dynamic-websocket-app dynamic-websocket-app
-   ```
+   ```  
+
+   Example:
+   vlc "video-path" --sout="#rtp{sdp=rtsp://:8554/stream,proto=tcp}" --rtsp-host=0.0.0.0 --rtsp-udp --no-audio
 
 ## Dynamic gestures
 Supportable Dynamic gestures:
