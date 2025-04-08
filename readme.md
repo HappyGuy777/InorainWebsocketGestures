@@ -90,8 +90,9 @@ dynamic_gestures/
    ```  
 
    Example:
+  ```bash
    vlc "video-path" --sout="#rtp{sdp=rtsp://:8554/stream,proto=tcp}" --rtsp-host=0.0.0.0 --rtsp-udp --no-audio
-
+   ```
 ## Dynamic gestures
 Supportable Dynamic gestures:
 
