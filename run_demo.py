@@ -10,7 +10,7 @@ from utils import Drawer, Event, targets
 
 def run(args):
     # If you want use camera
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture('rtsp://127.0.0.1:8554/stream')
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
     #If you want use video

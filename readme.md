@@ -86,7 +86,7 @@ dynamic_gestures/
 **Run the container:**
 
    ```bash
-   docker run --rm -p 8000:8000 --name dynamic-websocket-app dynamic-websocket-app
+   docker run --rm -p 8000:8000 -e RTSP_URL="your-url" --name dynamic-websocket-app dynamic-websocket-app
    ```
 
 ## Dynamic gestures

@@ -1,25 +1,25 @@
-# Используем официальный образ Python 3.9-slim
 FROM python:3.9-slim
 
-# Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /app
-
-# Копируем все файлы проекта в контейнер
 COPY . /app
 
-# Обновляем пакеты и устанавливаем системные зависимости для OpenCV и работы FastAPI
+# Устанавливаем системные зависимости для OpenCV (без GUI), FFmpeg и работы с графикой
 RUN apt-get update && apt-get install -y \
     build-essential \
     libsm6 \
     libxext6 \
     libxrender-dev \
+    libgl1 \
+    libglib2.0-0 \
+    ffmpeg \
  && rm -rf /var/lib/apt/lists/*
 
 # Устанавливаем зависимости Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Открываем порт для FastAPI (в вашем случае используется порт 8000)
+# Пробрасываем порт для FastAPI/WebSocket сервера
 EXPOSE 8000
 
-# Запускаем приложение с помощью uvicorn
-CMD ["uvicorn", "fastapi_server:app", "--host", "0.0.0.0", "--port", "8000"]
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+ENTRYPOINT ["/app/entrypoint.sh"]
